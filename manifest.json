@@ -14,7 +14,7 @@
   "content_scripts": [
     {
       "matches": ["https://github.com/*/*/blame/*"],
-      "js": ["jquery-2.1.4.js", "timelapse.js"]
+      "js": ["jquery-2.1.4.js", "slider.js", "timelapse.js"]
     }
   ]
 }
