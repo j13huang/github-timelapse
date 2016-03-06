@@ -3,7 +3,7 @@ var changeCommitHash = function() {
   var commitHash = commitData[this.value].sha;
   $("#timelapse-commit").val(commitHash);
 
-  var githubBlameURL = "https://github.com/j13huang/github-timelapse/blame/" + commitHash + "/README.md"
+  var githubBlameURL = "https://github.com/" + urlData.repo + "/blame/" + commitHash + "/" + urlData.filepath;
   $.ajax(githubBlameURL)
   .then(
     function(data) {
