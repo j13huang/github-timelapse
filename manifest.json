@@ -14,7 +14,7 @@
   "content_scripts": [
     {
       "matches": ["https://github.com/*/*/blame/*"],
-      "js": ["jquery-2.1.4.js", "moment.2.11.2.js", "moment-timezone.0.5.1.js", "slider.js", "timelapse.js"]
+      "js": ["jquery-2.1.4.js", "moment.2.11.2.js", "moment-timezone-with-data.0.5.1.js", "slider.js", "timelapse.js"]
     }
   ]
 }
