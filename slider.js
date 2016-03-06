@@ -1,7 +1,20 @@
 var commitData = null;
 var changeCommitHash = function() {
-  var sha = commitData[this.value].sha;
-  $("#timelapse-commit").val(sha);
+  var commitHash = commitData[this.value].sha;
+  $("#timelapse-commit").val(commitHash);
+
+  var githubBlameURL = "https://github.com/j13huang/github-timelapse/blame/" + commitHash + "/README.md"
+  $.ajax(githubBlameURL)
+  .then(
+    function(data) {
+      //console.log('page content: ' + data);
+      var blameContents = $(data).find(".file");
+      $(".file").replaceWith(blameContents);
+      
+    }, function(err) {
+      console.log("ERROR: " + err);
+    }
+  );
 }
 
 var insertSlider = function(data) {
